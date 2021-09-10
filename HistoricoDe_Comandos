@@ -1,0 +1,12 @@
+-Instalando NestJS
+npm install -g @nestjs/cli
+-verifica versão nest -v
+CRIANDO NOVO PROJETO
+-nest new NOME
+-nest new produtos
+*selecionar npm 
+entra na pasta e roda o comando, ele vai rodar na porta 3000
+-npm run start
+
+podemos apagar :
+app.controller.spec.ts
