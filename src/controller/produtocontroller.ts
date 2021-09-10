@@ -8,22 +8,27 @@ export class produtocontroller {
 
   }
 
-  @Post()
+  @Post('novo')
   async create(@Body() model: produto) {
     return await this.service.create(model);
   }
 
-  @Get()
+  @Get('todos')
   async get(): Promise<produto[]> {
     return await this.service.get();
   }
 
-  @Put(':id')
-  async update(@Param('id') id, @Body() model: produto) {
-    return await this.service.update(id, model);
+  @Get('produto/:id')
+  async getid(@Param('id') id:String): Promise<produto> {
+    return await this.service.getid(id);
   }
 
-  @Delete(':id')
+  @Put('produto')
+  async update(@Body() model: produto) {
+    return await this.service.update(model._id, model);
+  }
+
+  @Delete('delete/:id')
   async remove(@Param('id') id) {
     return await this.service.remove(id);
   }

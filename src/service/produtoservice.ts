@@ -12,6 +12,14 @@ export class produtoservice{
   async get(): Promise<produto[]> {
     return await this.model.find().exec();
   }
+  async getid(id:String): Promise<produto> {
+    try { 
+      return await this.model.findById(id);
+    } catch (e) {
+      return e;
+    }
+    
+  }
 
   async create(model: produto): Promise<produto> {
     const item = new this.model(model);
@@ -24,7 +32,7 @@ export class produtoservice{
 
   async remove(id: BigInteger): Promise<boolean> {
     try {
-      await this.model.findOneAndDelete(id);
+      await this.model.deleteOne(id);
       return true;
     } catch (e) {
       return e;
