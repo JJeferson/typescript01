@@ -10,3 +10,7 @@ entra na pasta e roda o comando, ele vai rodar na porta 3000
 
 podemos apagar :
 app.controller.spec.ts
+
+Não esquecer.
+Dentro do package.json nas dependencias adicionei o moongose, que é tipo o mongo repository.
+Depois disso dei npm install para ele pegar e instalar as dependencias dele
