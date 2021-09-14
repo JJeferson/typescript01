@@ -9,7 +9,7 @@ npm run start
 
 <h5>Pre Requisitos</h5>
 *MongoDB instlado </br>
-*Node.js </br>
+*Node.js  </br>
 
 <h5>Como rodar</h5>
 *baixe o fonte </br>
@@ -46,3 +46,5 @@ curl --location --request PUT 'http://localhost:3000/produtos/produto' \
 [DELETE]</br>
 curl --location --request DELETE 'http://localhost:3000/produtos/produto/613b9834106f501ae0974918'
 </br>
+Rodar os testes: </br>
+npm run test     </br>
